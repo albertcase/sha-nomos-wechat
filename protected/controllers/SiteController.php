@@ -11,22 +11,9 @@ class SiteController extends Controller
 	{
 		$this->render('index');
 	}
-
-	public function actionSpring()
+	public function actionList()
 	{
-		$this->render('spring');
-	}
-
-	public function actionProduct(){
-		$this->render('product');
-	}
-
-	public function actionFounder(){
-		$this->render('founder');
-	}
-
-	public function actionHistory(){
-		$this->render('history');
+		$this->render('list');
 	}
 
 	public function actionStore($id)
