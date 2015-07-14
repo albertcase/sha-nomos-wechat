@@ -2,3 +2,4 @@
 .vagrant
 /assets/
 /upload/
+/protected/runtime/application.log
