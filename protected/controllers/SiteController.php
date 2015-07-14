@@ -15,6 +15,12 @@ class SiteController extends Controller
 	{
 		$this->render('list');
 	}
+	public function actionResult(){
+		$this->render('result');
+	}
+	public function actionContact(){
+		$this->render('contact');
+	}
 
 	public function actionStore($id)
 	{

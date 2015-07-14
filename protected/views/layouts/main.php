@@ -120,7 +120,7 @@ document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3
 </script>
 <script>
 //------------监测函数
-function monitorAdd(option){
+/*function monitorAdd(option){
 	if(option){
 		var obj=option.obj;
 		var action=option.action||'click';
@@ -140,7 +140,7 @@ function monitorFunc(e,option){
 		_hmt.push(['_trackEvent', data.category, data.action, data.category+'——'+data.label]);
 		if(window.console) console.log('项目类别：'+data.category+' | '+'交互行为：'+data.action+' | '+'项目说明：'+data.category+'——'+data.label);
 	}//end if
-}//end func
+}//end func*/
 </body>
 </html>
 
