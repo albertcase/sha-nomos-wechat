@@ -19,7 +19,7 @@
 <!--end popAlert -->
 
 <div id="shareBox">
-	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/logo.jpg"  />
+	<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/common/share.png"/>
 </div>
 <!--end shareWx -->
 
@@ -70,7 +70,7 @@ $(document).ready(function(e) {
 			var img=$('<img>').attr({src:data[i].src}).appendTo(li);
 			var score=$('<i></i>').html(data[i].score+'分').appendTo(li);
 		}//end for
-		var more=$('<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php" class="btnMore"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/list/btn_more.png"></a></li>').appendTo(listBox);
+		var more=$('<li><a href="<?php echo Yii::app()->request->baseUrl; ?>/site/index.php" class="btnMore"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/list/btn_more.png"></a></li>').appendTo(listBox);
 	}//end func
 	
 	
