@@ -9381,3 +9381,57 @@ Stack trace:
 REQUEST_URI=/images/watch/w35.png
 HTTP_REFERER=http://192.168.8.101:9031/site
 ---
+2015/07/14 10:44:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "handler.php"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('handler.php')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/handler.php?action=upload
+HTTP_REFERER=http://127.0.0.1:9031/
+---
+2015/07/14 15:30:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "handler.php"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('handler.php')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/handler.php?action=upload
+HTTP_REFERER=http://127.0.0.1:9031/
+---
+2015/07/14 15:37:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/spring/logo.jpg"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('images/spring/l...')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/spring/logo.jpg
+HTTP_REFERER=http://127.0.0.1:9031/site/list
+---
+2015/07/14 15:37:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/spring/logo.jpg"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('images/spring/l...')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/spring/logo.jpg
+HTTP_REFERER=http://127.0.0.1:9031/site/list
+---
+2015/07/14 15:38:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/spring/logo.jpg"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('images/spring/l...')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/spring/logo.jpg
+HTTP_REFERER=http://127.0.0.1:9031/site/list
+---
+2015/07/14 15:38:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "images/spring/logo.jpg"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('images/spring/l...')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/spring/logo.jpg
+HTTP_REFERER=http://127.0.0.1:9031/site/list
+---
