@@ -50,12 +50,14 @@ class Handler{
 			$imageData = base64_decode($_POST["data"]);
 			if(!empty($post["src"]) && !empty($imageData))
 			{
-			    if(file_put_contents($post["src"],$imageData))
+			    $response["src"] = $this->upload_dir. uniqid() . '.jpg';
+			    if(file_put_contents($response["src"],$imageData))
 				{
-				    $response["src"] = $post["src"];
+				    unlink($post["src"]);
 				    $response["id"] = $post["id"];
 				    $where = array(":id"=> $post["id"]);
 				    $result["flag"] = 2;
+				    $result["src"] = $response["src"];
 				    $result["utime"] = date('Y-m-d H:i:s',time());
 				    for($i=0;$i<4;$i++)
 					{
@@ -76,7 +78,6 @@ class Handler{
 				    $response["code"] = 12;
 			    }
 		  ob_clean();
-		  
 		  return $response;
 	    }
 	    
