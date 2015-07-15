@@ -77,7 +77,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=urbandecay',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '1qazxsw2',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		

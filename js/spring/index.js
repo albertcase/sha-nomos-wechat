@@ -144,9 +144,9 @@
 			$('#popAlert').popOn({text:'文件错误，请重新开始~', url:window.location.href});
 		}else{
 			var data=$('canvas')[0].toDataURL("image/png").split(","); 
-			$.post("handler.php?action=update", { data:data[1],id:Img.id,src:Img.src },function(resp){
+			$.post("site/handler/action/update", { data:data[1],id:Img.id,src:Img.src },function(resp){
 				if(resp.code == 200){
-					window.location.href = 'result.html?id=' + resp.id +"&src="+ resp.src +"&marks="+ resp.mark;
+					window.location.href = 'site/result?id=' + resp.id +"&src="+ resp.src +"&marks="+ resp.mark;
 				}
 				if(data.code == 12) $('#popAlert').popOn({text:'参数错误，请重新上传~',url:"index.php"});
 				if(data.code == 13) $('#popAlert').popOn({text:'图片数据错误，请重新上传~'});

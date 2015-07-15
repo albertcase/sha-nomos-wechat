@@ -15,12 +15,20 @@ class SiteController extends Controller
 	{
 		$this->render('list');
 	}
+	public function actionresult(){
+		$this->render('result');
+	}
+	public function actionContact(){
+		$this->render('contact');
+	}
 
-	public function actionStore($id)
-	{
-		$sql = "select * from same_store where id = ".intval($id);
-		$store = Yii::app()->db->createCommand($sql)->queryRow();
-		$this->render('store', array('store' => $store));
+	public function actionhandler($action='null')
+	{	
+		
+		$funfrom = new Handler();
+		$result = $funfrom->$action();
+		echo json_encode($result);
+		Yii::app()->end();
 	}
 
 	/**
@@ -35,5 +43,12 @@ class SiteController extends Controller
 	    	else
 	        	$this->render('error', $error);
 	    }
+	}
+
+	public function actionTest($id)
+	{
+		$sql = "select * from same_store where id = ".intval($id);
+		$store = Yii::app()->db->createCommand($sql)->queryRow();
+		$this->render('store', array('store' => $store));
 	}
 }

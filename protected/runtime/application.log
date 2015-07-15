@@ -9381,3 +9381,275 @@ Stack trace:
 REQUEST_URI=/images/watch/w35.png
 HTTP_REFERER=http://192.168.8.101:9031/site
 ---
+2015/07/15 14:38:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'urbandecay'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(28): Handler->__construct()
+#6 [internal function]: SiteController->actionhandler('upload')
+#7 /vagrant/protected/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#8 /vagrant/protected/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#9 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('handler')
+#13 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/handler/ac...')
+#14 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /vagrant/index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/site/handler/action/upload
+---
+2015/07/15 14:42:03 [error] [php] move_uploaded_file(upload/55a600bbbca8e.jpg): failed to open stream: No such file or directory (/vagrant/protected/models/Handler.php:22)
+Stack trace:
+#0 unknown(0): SiteController->actionhandler()
+#1 /vagrant/protected/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /vagrant/protected/framework/web/CController.php(286): SiteController->runAction()
+#5 /vagrant/protected/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CWebApplication->run()
+REQUEST_URI=/site/handler/action/upload
+in /vagrant/protected/models/Handler.php (22)
+in /vagrant/protected/controllers/SiteController.php (29)
+in /vagrant/index.php (19)
+2015/07/15 14:43:08 [error] [php] move_uploaded_file(upload/55a600fcbffa0.jpg): failed to open stream: No such file or directory (/vagrant/protected/models/Handler.php:22)
+Stack trace:
+#0 unknown(0): SiteController->actionhandler()
+#1 /vagrant/protected/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /vagrant/protected/framework/web/CController.php(286): SiteController->runAction()
+#5 /vagrant/protected/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): SiteController->run()
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CWebApplication->run()
+REQUEST_URI=/site/handler/action/upload
+in /vagrant/protected/models/Handler.php (22)
+in /vagrant/protected/controllers/SiteController.php (29)
+in /vagrant/index.php (19)
+2015/07/15 14:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "result.html"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('result.html')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/result.html?id=50&src=upload/55a601862d5fb.jpg&marks=20,25,23,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:46:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "result.html"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('result.html')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/result.html?id=50&src=upload/55a601862d5fb.jpg&marks=20,25,23,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:48:30 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=52&src=upload/55a6022e5c3f1.jpg&marks=20,23,21,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:48:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in /vagrant/protected/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /vagrant/index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://192.168.8.119:9031/site/result?id=52&src=upload/55a6022e5c3f1.jpg&marks=20,23,21,24
+---
+2015/07/15 14:54:10 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=52&src=upload/55a6022e5c3f1.jpg&marks=20,23,21,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:54:11 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=52&src=upload/55a6022e5c3f1.jpg&marks=20,23,21,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:54:47 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionresult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=52&src=upload/55a6022e5c3f1.jpg&marks=20,23,21,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:54:48 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionresult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=52&src=upload/55a6022e5c3f1.jpg&marks=20,23,21,24
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 14:56:48 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=54&src=upload/55a6042d248a1.jpg&marks=25,20,20,21
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 15:00:59 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=54&src=upload/55a6042d248a1.jpg&marks=25,20,20,21
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 15:01:00 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=54&src=upload/55a6042d248a1.jpg&marks=25,20,20,21
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 15:01:01 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=54&src=upload/55a6042d248a1.jpg&marks=25,20,20,21
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 15:01:02 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=54&src=upload/55a6042d248a1.jpg&marks=25,20,20,21
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 15:01:03 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=54&src=upload/55a6042d248a1.jpg&marks=25,20,20,21
+HTTP_REFERER=http://192.168.8.119:9031/
+---
+2015/07/15 15:02:13 [error] [exception.CException] exception 'CException' with message 'SiteController 无法找到请求的视图 "result".' in /vagrant/protected/framework/web/CController.php:878
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(782): CController->renderPartial('result', NULL, true)
+#1 /vagrant/protected/controllers/SiteController.php(19): CController->render('result')
+#2 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionResult()
+#3 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('result')
+#7 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/result')
+#8 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /vagrant/index.php(19): CApplication->run()
+#10 {main}
+REQUEST_URI=/site/result?id=56&src=upload/55a6057206e8a.jpg&marks=25,21,24,25
+HTTP_REFERER=http://127.0.0.1:9031/
+---

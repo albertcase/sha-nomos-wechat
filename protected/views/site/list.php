@@ -51,7 +51,7 @@ $(document).ready(function(e) {
 		*/
 		//ajax获取数据
 		$.ajax({
-			url : "handler.php?action=getTop",
+			url : "site/handler/action/getTop",
 			type:"GET",
 			cache:false,
 			dataType:"json",
