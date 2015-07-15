@@ -8,26 +8,35 @@ class SiteController extends Controller
 	 */
 
 	public function actionIndex()
-	{
-		$this->render('index');
+	{	
+
+		$my_t=gettimeofday(true);
+		$views = md5($my_t);
+		$_SESSION['views'] = $views;
+		$this->render('index',array('views' => $_SESSION['views']));
 	}
 	public function actionList()
 	{
 		$this->render('list');
 	}
-	public function actionresult(){
+	public function actionresult()
+	{
 		$this->render('result');
 	}
 	public function actionContact(){
 		$this->render('contact');
 	}
 
-	public function actionhandler($action='null')
+	public function actionhandler($action='null',$viewid="null")
 	{	
-		
+		if($_SESSION['views'] == $viewid){
 		$funfrom = new Handler();
 		$result = $funfrom->$action();
 		echo json_encode($result);
+		}
+		else{
+		echo false;
+		}
 		Yii::app()->end();
 	}
 
