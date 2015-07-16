@@ -42,7 +42,7 @@
   <!--end camera -->
   
   
-  <div class="fileBox"><input type="file" accept="image/jpeg" name="fileInput" id="fileInput" viewid=<?php echo $views?> /></div>  
+  <div class="fileBox"><input type="file" accept="image/jpeg" name="fileInput" id="fileInput" viewid=<?php echo $views; ?> /></div>  
     
 <!-- InstanceEndEditable -->
 </div>
