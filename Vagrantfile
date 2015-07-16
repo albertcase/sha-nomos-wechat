@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network :private_network, ip: "192.168.33.8"
 
-  config.vm.synced_folder "./", "/vagrant", :nfs => true
+  config.vm.synced_folder "./", "/vagrant"
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1024"]

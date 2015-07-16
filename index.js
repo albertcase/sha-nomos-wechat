@@ -1,7 +1,4 @@
 
-	//alert($(window).width()+'/'+$(window).height());
-	
-	// 框架
 	var wrapBox=$('.wrap');
 	var loadBox=$('#loadBox');
 	
@@ -143,7 +140,7 @@
 		if(!Img.id || !Img.src){
 			$('#popAlert').popOn({text:'文件错误，请重新开始~', url:window.location.href});
 		}else{
-			var data=$('canvas')[0].toDataURL("image/png").split(","); 
+			var data=$('canvas')[0].toDataURL("image/png").split(",");
 			var viewid = $("#fileInput").attr("viewid");
 			$.post("site/handler/action/update/viewid/"+viewid, { data:data[1],id:Img.id,src:Img.src },function(resp){
 				if(resp.code == 200){

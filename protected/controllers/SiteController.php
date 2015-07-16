@@ -9,24 +9,40 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-		$this->render('index');
+
+		$my_t=gettimeofday(true);
+		$views = md5($my_t);
+		$_SESSION['views'] = $views;
+		$this->render('index',array('views' => $views));
 	}
 	public function actionList()
 	{
-		$this->render('list');
+		$funfrom = new Handler();
+		$results = $funfrom->getTop();
+		$this->render('list',$results);
 	}
+
 	public function actionResult(){
 		$this->render('result');
 	}
+
 	public function actionContact(){
 		$this->render('contact');
 	}
 
-	public function actionStore($id)
-	{
-		$sql = "select * from same_store where id = ".intval($id);
-		$store = Yii::app()->db->createCommand($sql)->queryRow();
-		$this->render('store', array('store' => $store));
+	public function actionhandler($action='null',$viewid='null')
+	{	
+		$router = array("upload","update");
+		if(in_array($action,$router)){
+			if($_SESSION['views'] != $viewid){
+			echo false;
+			Yii::app()->end();
+			}
+		}
+		$funfrom = new Handler();
+		$result = $funfrom->$action();
+		echo json_encode($result);
+		Yii::app()->end();
 	}
 
 	/**
@@ -41,5 +57,11 @@ class SiteController extends Controller
 	    	else
 	        	$this->render('error', $error);
 	    }
+	}
+
+	public function actionTest()
+	{
+		echo $_SESSION['views'];
+		Yii::app()->end();
 	}
 }
