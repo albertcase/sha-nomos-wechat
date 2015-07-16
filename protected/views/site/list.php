@@ -1,9 +1,18 @@
 <div class="wrap">
 <!-- InstanceBeginEditable name="content" -->
 
-	<section class="listBox">
+	<section class="listBox" id="showlist">
     	<h3><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/list/logo.png"></h3>
-    	<ul></ul>
+    	<ul>
+    	<?php 
+    	$layout = "";
+    	foreach( $data as $x){
+    	$layout = $layout."<li><img src='".Yii::app()->request->baseUrl."/".$x['src']."'><i>".$x['score']."分</i></li>";
+    	}
+    	$layout = $layout."<li><a href='".Yii::app()->request->baseUrl."/' class='btnMore'><img src='".Yii::app()->request->baseUrl."/images/spring/list/btn_more.png'></a></li>";
+    	echo $layout;
+    	?>
+    	</ul>
     </section>
     <!--end result -->
 
@@ -29,7 +38,7 @@
 <div id="turnBox"><span></span></div>
 <script>
 $(document).ready(function(e) {
-	var listBox=$('section.listBox ul');
+	var listBox=$("#showlist ul");
     var watchData=[];
 	var watchMax=8;
 	
@@ -52,15 +61,17 @@ $(document).ready(function(e) {
 		//ajax获取数据
 		$.ajax({
 			url : "site/handler/action/getTop",
-			type:"GET",
+
 			cache:false,
 			dataType:"json",
 			success: function(resp){
 				if(resp.code == 200){
+					alert("aaaaaaa");
 					creatWatch(resp.data);
+					alert("aaaaaaa");
 				}
 			}
-		})
+		});
 		
 	}//end func
 	
