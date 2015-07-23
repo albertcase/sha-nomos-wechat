@@ -1,7 +1,4 @@
 
-	//alert($(window).width()+'/'+$(window).height());
-	
-	// 框架
 	var wrapBox=$('.wrap');
 	var loadBox=$('#loadBox');
 	
@@ -55,7 +52,7 @@
 		//载入图
 		loadBox.show();
 		var loader = new PxLoader();
-		for(var i=1; i<=watchMax; i++) loader.addImage('../images/spring/watch/w'+i+'.png');	
+		for(var i=1; i<=watchMax; i++) loader.addImage('images/spring/watch/w'+i+'.png');	
 		loader.addCompletionListener(function() {
 			if(window.console) console.log('load complete');
 			loadBox.hide();
@@ -70,7 +67,7 @@
 		//focus
 		for(var i=0; i<watchMax; i++){
 			var li=$('<li></li>').appendTo(watchList);
-			var wt=$('<img>').attr({src:'../images/spring/watch/w'+(i+1)+'.png'}).appendTo(li);
+			var wt=$('<img>').attr({src:'images/spring/watch/w'+(i+1)+'.png'}).appendTo(li);
 		}//end for
 		watchFocus.css({width:$(window).width()}).focusR();				
 		
@@ -143,7 +140,7 @@
 		if(!Img.id || !Img.src){
 			$('#popAlert').popOn({text:'文件错误，请重新开始~', url:window.location.href});
 		}else{
-			var data=$('canvas')[0].toDataURL("image/png").split(","); 
+			var data=$('canvas')[0].toDataURL("image/png").split(",");
 			var viewid = $("#fileInput").attr("viewid");
 			$.post("site/handler/action/update/viewid/"+viewid, { data:data[1],id:Img.id,src:Img.src },function(resp){
 				if(resp.code == 200){
@@ -165,7 +162,7 @@
 			x:imgCv.width()/2,
 			y:imgCv.height()/2,
 			origin: { x: "center", y: "center" },
-			image: '../images/spring/watch/w'+id+'.png',
+			image: 'images/spring/watch/w'+id+'.png',
 		});
 		imgCanvas.addChild(imgWatch);
 		imgPanel.show();

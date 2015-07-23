@@ -1,6 +1,5 @@
 <div class="wrap">
 <!-- InstanceBeginEditable name="content" -->
-
 	<section class="explainBox">
     	<h3><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/index/w1.jpg"></h3>
         <h4>请按照提示<br>拍摄或上传一张手腕照片并发给我们</h4>
@@ -43,7 +42,7 @@
   <!--end camera -->
   
   
-  <div class="fileBox"><input type="file" accept="image/jpeg" name="fileInput" id="fileInput"/></div>  
+  <div class="fileBox"><input type="file" accept="image/jpeg" name="fileInput" id="fileInput" viewid=<?php echo $views; ?> /></div>  
     
 <!-- InstanceEndEditable -->
 </div>
