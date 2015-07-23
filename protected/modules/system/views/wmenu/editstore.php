@@ -75,7 +75,7 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 					<td style="text-align:right;" class="row">图片：</td>
 					<td style="text-align:left;" class="row">
 						<div id="SystemWmenuEditStoreSimgShowArea">
-							<img src="<?php echo  $baseUrl.$storeMsg['picUrl']?>" id="SystemWmenuEditStoreSimgShow">
+							<img src="<?php echo  $baseUrl.$storeMsg['picUrl']?>" id="SystemWmenuEditStoreSimgShow" width="100px">
 						</div>
 						<div id="SystemWmenuEditStoreSimgBut" style="width:120px">
 							<div id="SystemWmenuEditStoreSimgProcessing" style="display:none">
@@ -91,7 +91,7 @@ $msgTypeAry = array('text'=>'文本','news'=>'图文','image'=>'图片',);
 					<td style="text-align:right;" class="row">地图：</td>
 					<td style="text-align:left;" class="row">
 						<div id="SystemWmenuEditStoreBimgShowArea">
-							<img src="<?php echo  $baseUrl.$storeMsg['mapUrl']?>" id="SystemWmenuEditStoreBimgShow">
+							<img src="<?php echo  $baseUrl.$storeMsg['mapUrl']?>" id="SystemWmenuEditStoreBimgShow"  width="100px">
 						</div>
 						<div id="SystemWmenuEditStoreBimgBut" style="width:120px">
 							<div id="SystemWmenuEditStoreBmgProcessing" style="display:none">

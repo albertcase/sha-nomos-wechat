@@ -50,7 +50,6 @@
 	var watchNow=0,watchMax=35,watchSelected=false;
 	
 	loadFunc();
-	
 	function loadFunc(){
 		//载入图
 		loadBox.show();

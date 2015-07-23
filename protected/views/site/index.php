@@ -65,6 +65,7 @@
     <div id="turnBox"><span></span></div>
 
 <!-- InstanceBeginEditable name="script" -->
+<script type="text/javascript">var BASEURL='<?php echo Yii::app()->request->baseUrl; ?>'</script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/spring/ocanvas.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/spring/nomos.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/spring/index.js"></script>

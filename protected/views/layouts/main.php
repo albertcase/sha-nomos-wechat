@@ -16,6 +16,7 @@
 <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/favicon.ico">
 <!-- css -->
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/spring/iphone.css" />
+<script type="text/javascript">var BASEURL='<?php echo Yii::app()->request->baseUrl; ?>';</script>
 <script>
 //平台检测
 var os=detectOS();
@@ -47,7 +48,6 @@ function detectWeixin(){
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/spring/iphone.pop.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/spring/iphone.focusR.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/spring/common.js"></script>
-
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
@@ -65,82 +65,13 @@ $(document).ready(function(e) {
 });
 </script>-->
 <!-- InstanceEndEditable -->
-<script>
-var lineLink = "http://t.buzzreader.cn/cloud/nomos/",
-	imgUrl = "<?php echo Yii::app()->request->baseUrl; ?>/images/spring/share.jpg",
-	shareTitle = 'NOMOS腕表',
-	descContent = "足不出户却能坐拥几十款精美腕表？NOMOS试戴功能就能做到！";
-
-function shareFriend() {
-	WeixinJSBridge.invoke("sendAppMessage", {
-		img_url: imgUrl,
-		img_width: "212",
-		img_height: "212",
-		link: lineLink,
-		desc: descContent,
-		title: shareTitle
-	},
-	function (res) { 
-		if(res.err_msg != 'send_app_msg:cancel' && res.err_msg != 'share_timeline:cancel') {
-			monitorFunc(null,{label:'转发朋友'});
-		} 
-	})
-}
-function shareTimeline() {
-	WeixinJSBridge.invoke("shareTimeline", {
-		img_url: imgUrl,
-		img_width: "212",
-		img_height: "212",
-		link: lineLink,
-		desc: descContent,
-		title: descContent
-	},
-	function (res) {
-		if(res.err_msg != 'send_app_msg:cancel' && res.err_msg != 'share_timeline:cancel') {
-			monitorFunc(null,{label:"分享朋友圈"});
-		} 
-	})
-}	
-document.addEventListener("WeixinJSBridgeReady",
-function () {
-	WeixinJSBridge.on("menu:share:appmessage",
-	function (e) {
-		shareFriend()
-	});
-	WeixinJSBridge.on("menu:share:timeline",
-	function (e) {
-		shareTimeline()
-	})
-});
-</script>
 <script type="text/javascript">
 var _hmt = _hmt || [];
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fce97de6ac4acb27164e76e770615e2f3' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script>
-//------------监测函数
-/*function monitorAdd(option){
-	if(option){
-		var obj=option.obj;
-		var action=option.action||'click';
-		var category=option.category||'页面监测';
-		var label=option.label||'';
-		if(obj && obj.length>0){
-			if(obj.length==1) obj.on(action,{category:category,action:action,label:label},monitorFunc);
-			else obj.each(function(i) {$(this).on(action,{category:category,action:action,label:label+(i+1)},monitorFunc);});
-		}//end if
-	}//end if
-}//end func
-function monitorFunc(e,option){
-	if(e) var data=e.data;
-	else var data=option;
-	if(data){
-		if(!data.action) data.action='系统交互行为';
-		_hmt.push(['_trackEvent', data.category, data.action, data.category+'——'+data.label]);
-		if(window.console) console.log('项目类别：'+data.category+' | '+'交互行为：'+data.action+' | '+'项目说明：'+data.category+'——'+data.label);
-	}//end if
-}//end func*/
+
 </body>
 </html>
 
