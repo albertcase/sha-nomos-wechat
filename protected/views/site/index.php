@@ -6,7 +6,14 @@
         <p><i>1</i>拍摄时手机平行于手臂,中指平行于画面,中指拇指均抵住画面边缘</p>
         <p><i>2</i>上传照片后调整大小,使中指拇指均抵住画面边缘</p>
     </section>
+
     <!--end explain -->
+
+    <section class="list_btn">
+        <a href="<?php echo Yii::app()->request->baseUrl; ?>/site/list">
+            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/index/list_btn.jpg" width="100%"/>
+        </a>
+    </section>    
     
     <section class="cameraBox">
         <a id="btnCamera"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/spring/index/btn_camera.png"></a>

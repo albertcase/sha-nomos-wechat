@@ -236,3 +236,9 @@ section.resultBox table.btns td{ padding:0 0.5em;}
 	25%{opacity:1;}
 	50%{opacity:0;}
 }
+
+section.list_btn{
+	width: 38%;
+	margin: 1em auto 0;
+	position: relative;
+}
