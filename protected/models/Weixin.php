@@ -2,9 +2,9 @@
 
 class Weixin{
 
-	private $_TOKEN = 'samesame';
-	private $_appid = 'wxeb57276615f0d9f1';
-	private $_secret = '42ac444f36a854b3dc3c66bdc59c98cc';
+	private $_TOKEN = 'reYb1byeC8shy';
+	private $_appid = 'wx49d53763fed66bcb';
+	private $_secret = 'e50840e7b78551da8eaef6e4b48f60b8';
 	private $_eventKey = array('A1','B1','C1','C2','B2','B4','A2');
 	private $_db = null;
 	private $_fromUsername = null;
@@ -39,7 +39,7 @@ class Weixin{
 				if($msgType=='text'){
 					//return $this->sendService($fromUsername, $toUsername);
                 	$this->systemLog($postStr,$fromUsername,$msgType);
-                	$sql = "SELECT * FROM same_wmenu_event WHERE keyword=:keyword ORDER BY id DESC";
+                	$sql = "SELECT * FROM same_wmenu_event WHERE keyword=:keyword ORDER BY id";
                 	$command = $this->_db->createCommand($sql);
                 	$command->bindParam(':keyword',$keyword,PDO::PARAM_STR);
                 	$rs = $command->select()->queryAll();
@@ -55,7 +55,7 @@ class Weixin{
                 		}
                 	}
                 	if(in_array($rs[0]['content'], $this->_eventKey)){
-                		$sql = "SELECT B.* FROM `same_wmenu` A left join same_wmenu_event B ON A.id=B.mid WHERE A.`eventkey`='".$rs[0]['content']."' ORDER BY id DESC";
+                		$sql = "SELECT B.* FROM `same_wmenu` A left join same_wmenu_event B ON A.id=B.mid WHERE A.`eventkey`='".$rs[0]['content']."' ORDER BY id";
 						$rs = $this->_db->createCommand($sql)->select()->queryAll();
 						if($rs[0]['msgtype']=='text'){
 	                		return $this->sendMsgForText($fromUsername, $toUsername, $time, "text", $rs[0]['content']);
