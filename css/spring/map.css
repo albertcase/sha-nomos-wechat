@@ -1,0 +1,230 @@
+/*reset S*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td{margin: 0; padding: 0; } fieldset, img {border: 0; } address, caption, cite, code, dfn, em, strong, th, var, optgroup {font-style: normal; font-weight: normal; } h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal; } abbr, acronym {border: 0; font-variant: normal; } input, button, textarea, select, optgroup, option {font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; } code, kbd, samp, tt {font-size: 100%; } @purpose To enable resizing for IE *//*@branch For IE6-Win, IE7-Win input, button, textarea, select {*font-size: 100%; } body {line-height: 1.5; } ol, ul {list-style: none; } /* tables still need 'cellspacing="0"' in the markup */table {border-collapse: collapse; border-spacing: 0; } caption, th {text-align: left; } sup, sub {font-size: 100%; vertical-align: baseline; } /* remember to highlight anchors and inserts somehow! */:link, :visited, ins {} blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }ul{list-style: none;}img{vertical-align: top;}
+body{font-size: 62.5%; line-height: 1.8; background-color: white; font-family: Verdana, "微软雅黑";}
+/*reset E*/
+.clearfix:before, .clearfix:after {content: ""; display: table; } .clearfix:after {clear: both; } .clearfix {*zoom: 1; } .com-hide{display:none;}
+a{
+	color:#000;
+	text-decoration: underline;
+}
+a:hover{ color:#e61a14; text-decoration:underline;}
+
+select{
+	border: 1px solid #cccccc;
+	height:34px;line-height: 34px;	
+	font-size: 1em;
+}
+.com-wrap{
+	padding-left: 2%;padding-right: 2%;
+}
+.com-header{
+	padding-top: 20px;padding-bottom: 20px;
+	text-align: center;
+}
+.com-header .logo{
+	margin-left: auto;margin-right: auto;
+}
+.com-pic{
+	position: relative;
+}
+.com-pic img{
+	width:100%;
+}
+.com-text1{
+	text-align: center;
+	color:white;
+	background-color: rgba(0,0,0,0.8);	
+	line-height: 1.3;
+}
+.com-text1 .t1{
+	padding-top: 10px;	
+	padding-bottom: 5px;	
+	font-size: 1.6em;
+}
+.com-text1 .t2{
+	font-size: 1em;
+	padding-bottom: 10px;
+	color:#FFFFFF;
+	font-family:Verdana, "微软雅黑";
+}
+.com-text1 .t2 a{color:#FFFFFF;}
+.com-title1{	
+	font-size: 3.6em;
+	line-height: 60px;
+	background-color: #000000;
+}
+.com-title1 strong{
+	color:white;
+	padding-left: 2%;
+}
+.com-p1{
+	font-size: 2.4em;line-height: 37px;
+	color:#050505;
+}
+.com-form1{
+	font-size: 2.4em;
+}
+.com-form1 .list{
+	padding-top: 16px;
+	line-height: 34px;	
+}
+.com-form1 .title{
+	width:25%;float:left;	
+}
+.com-form1 .title em{
+	color:#9A000F;padding-left: 0.2em;
+}
+.com-form1 .input{
+	width:75%;float:left;
+}
+.com-form1 .input-text,
+.com-form1 select,
+.com-form1 textarea{
+	border: 1px solid #cccccc;
+	width: 100%;
+	height:34px;line-height: 34px;	
+	font-size: 1em;
+}
+.com-form1 select{		
+	width: 100%;
+	
+}
+.com-form1 textarea{
+	height: 150px;resize:none;
+}
+.com-form1 .input-checkbox{
+	vertical-align: middle;margin-right: 1em;
+}
+.com-form1 .submit{
+	font-size: 0.9em;
+	padding-top: 30px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+.com-form1 .submit .text{
+	margin-bottom: 10px;
+}
+
+.com-btn1{
+	display: inline-block;font-size: 24px;	
+	background-color: #CF081F;color:white;border:none;line-height: 48px;height: 48px;
+	padding-left: 2em;padding-right: 2em;
+	border-bottom-right-radius:48px;
+	border-top-right-radius:48px;
+	border-bottom-left-radius:48px;
+	border-top-left-radius:48px;
+	cursor: pointer;
+}
+.com-popup1{
+	position: fixed;left:50%;top:35%;z-index: 101;
+	width:510px;margin-left: -265px;
+	border:10px solid #CC0000;
+	text-align: center;
+	background-color: white;font-size: 36px;
+}
+.com-popup1 .main{
+	padding-top: 42px;padding-bottom: 55px;
+}
+.com-popup1 .main p{
+	line-height: 127px;
+}
+.com-mask1{
+	position: fixed;left:0;top:0;width:100%;height: 100%;background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+}
+.com-form2{
+	background-color: #E1E1E1;
+}
+.com-form2 .hd{
+
+}
+.com-form2 .hd strong{
+	font-size: 3.6em;line-height: 100px;
+}
+.com-form2 .bd{
+	padding-bottom: 23px;
+	line-height: 55px;
+}
+.com-form2 select{
+	padding-left: 10px;
+	border:1px solid #9F9F9F;height:55px;color:#666666;
+	width:35%;margin-right: 2%;font-size: 2.6em;
+}
+.com-form2 .ui-radio{
+	width:16%;
+	margin-right: 2%;
+	color:#999999;
+	font-size: 2.6em;
+	cursor: pointer;
+}
+.com-form2 .ui-radio .inner{
+	padding-left: 1.5em;
+}
+.com-form2 .ui-radioed{
+	background: url(../images/ball.png) no-repeat 10px center;
+}
+.com-form2 .com-btn1{
+	width:24%;padding:0;
+}
+.com-form2 select,
+.com-form2 .ui-radio,
+.com-form2 .ui-radioed,
+.com-form2 .com-btn1{
+	float:left;
+}
+.com-item2{
+
+}
+.com-item2 .hd{
+	line-height: 88px;
+	height: 88px;font-size: 3.8em;color:#333333;border-bottom: 2px solid #EFEFEF;
+	margin-bottom: 10px;
+}
+.com-item2 .hd strong{
+
+}
+.com-item2 .bd{
+
+}
+.com-item2 .bd .list{
+	line-height: 37px;
+	padding-top: 22px;padding-bottom: 22px;
+}
+.com-item2 .bd .list strong{
+	font-size: 3.6em;color:#CC3333;margin-right: 1em;
+}
+.com-item2 .bd .list em{
+	display: inline-block;
+	height: 37px;
+	line-height: 37px;
+	font-size: 2.6em;
+	background-color:#999999;
+	color:white;
+	padding-left: 1em;padding-right: 1em;
+	border-bottom-right-radius:48px;
+	border-top-right-radius:48px;
+	border-bottom-left-radius:48px;
+	border-top-left-radius:48px;
+}
+.com-item3{
+
+}
+.com-item3 .hd{
+	
+}
+.com-item3 h3{
+	
+}
+.com-item3 p{
+
+}
+.com-item3 .list{
+	
+}
+
+.detail-pic{
+	margin-bottom: 18px;
+}
+.detail-text1{
+	position: absolute;left:0;top:0;width:100%;
+}

@@ -45,6 +45,12 @@ class SiteController extends Controller
 		Yii::app()->end();
 	}
 
+	public function actionStore($id)
+	{
+		$sql = "select * from same_store where id = ".intval($id);
+		$store = Yii::app()->db->createCommand($sql)->queryRow();
+		$this->render('store', array('storeMsg' => $store));
+	}
 	/**
 	 * This is the action to handle external exceptions.
 	 */

@@ -74,7 +74,7 @@
 
 <div id="systemWmenustoreDatagridTb" style="height:auto">
 	<div style="margin-bottom:5px">
-		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="openTab('添加二维码','/wmenu/addstore')">新增</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="openTab('添加门店','/wmenu/addstore')">新增</a>
 	</div>
 </div>
 
