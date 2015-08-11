@@ -1,3 +1,6 @@
+
+2015/07/23 17:53:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "site" 动作.' in /vagrant/protected/framework/web/CController.php:483
+
 2015/07/16 10:38:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "images" 动作.' in /vagrant/protected/framework/web/CController.php:483
 Stack trace:
 #0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('images')
@@ -4630,6 +4633,7 @@ REQUEST_URI=/site/images/spring/watch/w35.png
 HTTP_REFERER=http://127.0.0.1:9031/site/index
 ---
 2015/07/16 10:46:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "site" 动作.' in /vagrant/protected/framework/web/CController.php:483
+>>>>>>> 15a30462a7d571c8be0bb08c768926f5ad0caed5
 Stack trace:
 #0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('site')
 #1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('site')
@@ -4637,6 +4641,133 @@ Stack trace:
 #3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
 #4 /vagrant/index.php(19): CApplication->run()
 #5 {main}
+<<<<<<< HEAD
+REQUEST_URI=/site/site/handler/action/upload/viewid/789514705c3fd5bb0b098c15f40bf7e2
+HTTP_REFERER=http://192.168.8.108:9031/site/
+---
+2015/07/23 17:58:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'nomos'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(20): Handler->__construct()
+#6 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionList()
+#7 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('list')
+#11 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/list')
+#12 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /vagrant/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/list
+HTTP_REFERER=http://192.168.8.108:9031/site/
+---
+2015/07/23 17:58:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "newproduct" 动作.' in /vagrant/protected/framework/web/CController.php:483
+Stack trace:
+#0 /vagrant/protected/framework/web/CController.php(270): CController->missingAction('newproduct')
+#1 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('newproduct')
+#2 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/newproduct')
+#3 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /vagrant/index.php(19): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/newproduct
+---
+2015/07/23 17:59:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'nomos'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(20): Handler->__construct()
+#6 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionList()
+#7 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('list')
+#11 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/list')
+#12 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /vagrant/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/list
+---
+2015/07/23 18:01:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'nomos'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(20): Handler->__construct()
+#6 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionList()
+#7 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('list')
+#11 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/list')
+#12 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /vagrant/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/list
+HTTP_REFERER=http://192.168.8.108:9031/site
+---
+2015/07/23 18:08:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'nomos'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(20): Handler->__construct()
+#6 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionList()
+#7 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('list')
+#11 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/list')
+#12 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /vagrant/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/list
+HTTP_REFERER=http://192.168.8.108:9031/site
+---
+2015/07/23 18:09:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'nomos'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(20): Handler->__construct()
+#6 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionList()
+#7 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('list')
+#11 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/list')
+#12 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /vagrant/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/list
+HTTP_REFERER=http://192.168.8.108:9031/site
+---
+2015/07/23 19:23:43 [error] [php] Undefined index: views (/vagrant/protected/controllers/SiteController.php:37)
+Stack trace:
+#0 /vagrant/protected/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /vagrant/protected/framework/web/CController.php(286): SiteController->runAction()
+#3 /vagrant/protected/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#4 /vagrant/protected/framework/web/CWebApplication.php(282): SiteController->run()
+#5 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#7 /vagrant/index.php(19): CWebApplication->run()
+REQUEST_URI=/site/handler/action/upload/viewid/c2162677db300a219cbc3b66fd630f08
+in /vagrant/protected/controllers/SiteController.php (37)
+in /vagrant/index.php (19)
+=======
 REQUEST_URI=/site/site/handler/action/upload/viewid/53e1f2d0ff9fad585283451182328096
 HTTP_REFERER=http://127.0.0.1:9031/site/index
 ---
@@ -5491,4 +5622,25 @@ Stack trace:
 #4 /vagrant/index.php(19): CApplication->run()
 #5 {main}
 REQUEST_URI=/site/store?id=1
+---
+>>>>>>> 15a30462a7d571c8be0bb08c768926f5ad0caed5
+2015/08/11 18:23:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'nomos'' in /vagrant/protected/framework/db/CDbConnection.php:381
+Stack trace:
+#0 /vagrant/protected/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /vagrant/protected/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /vagrant/protected/framework/base/CModule.php(387): CDbConnection->init()
+#3 /vagrant/protected/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /vagrant/protected/models/Handler.php(13): CModule->__get('db')
+#5 /vagrant/protected/controllers/SiteController.php(20): Handler->__construct()
+#6 /vagrant/protected/framework/web/actions/CInlineAction.php(49): SiteController->actionList()
+#7 /vagrant/protected/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /vagrant/protected/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /vagrant/protected/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /vagrant/protected/framework/web/CWebApplication.php(282): CController->run('list')
+#11 /vagrant/protected/framework/web/CWebApplication.php(141): CWebApplication->runController('site/list')
+#12 /vagrant/protected/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /vagrant/index.php(19): CApplication->run()
+#14 {main}
+REQUEST_URI=/site/list
+HTTP_REFERER=http://192.168.8.101:9031/site
 ---

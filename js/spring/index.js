@@ -47,7 +47,7 @@
 	var watchBox=$('section.watchBox');
 	var watchFocus=$('.focus');
 	var watchList=watchFocus.children('ul');
-	var watchNow=0,watchMax=35,watchSelected=false;
+	var watchNow=0,watchMax=38,watchSelected=false;
 	
 	loadFunc();
 	function loadFunc(){
